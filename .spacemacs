@@ -310,11 +310,11 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-(setq configuration-layer-elpa-archives
+  (setq configuration-layer-elpa-archives
     '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
       ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
       ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
-(setq exec-path (cons "/Users/enjunwang/.pyenv/shims" exec-path))
+  ;; (setq exec-path (cons "/Users/enjunwang/.pyenv/shims" exec-path))
   )
 
 (defun dotspacemacs/user-config ()
@@ -328,6 +328,8 @@ you should place your code here."
   (spacemacs/toggle-indent-guide-globally)
   (setq-default js2-basic-offset 2)
   (setq-default js-indent-level 2)
+  ;; (setq-default flycheck-python-pycompile-executable "/Users/enjunwang/.pyenv/shims/python")
+  (setq-default flycheck-disabled-checkers '(python-pycompile))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
